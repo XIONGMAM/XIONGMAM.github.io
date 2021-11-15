@@ -1,7 +1,4 @@
 $(function () {
-    // window.location.href = /Android|webOS|iPhone|iPad|BlackBeery/i.test(navigator.userAgent) ? "index.html" :
-    //     "pc.html"
-    // loading start
     const loading = setTimeout(function () {
         $('.loading_box').stop().fadeOut();
     }, 5000);
