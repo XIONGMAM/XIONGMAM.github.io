@@ -1,447 +1,428 @@
-html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-em,
-img,
-p,
-dd,
-dl,
-dt,
-ul,
-li,
-ol,
-form,
-label,
-table,
-tr,
-td,
-input {
-  margin: 0;
-  padding: 0;
+/* init css start*/
+:root {
+    --cl-fontColor: #ff8989;
+    --cl-bgColor: #fdf4f4;
+    --cl-backUp: #fa6c9b;
+    --cl-white: white;
+    --cl-black: black;
+    --cl-gray: #f2efef;
+    --cl-gray-100: #e9e6e6;
+    --cl-gray-200: #afafaf;
+    --cl-gray-300: rgb(214, 214, 214);
+    --cl-WeChat: #87abca;
 }
-img,
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-family: Arial, Microsoft YaHei, Heiti SC, tahoma, hiragino Sans GB, "宋体";
+    overflow-x: hidden;
+}
+
 a {
-  -webkit-touch-callout: none;
+    color: #666;
+    text-decoration: none;
+    -webkit-touch-callout: none;
 }
-img {
-  pointer-events: none;
-  /* 禁止长按图片保存 */
-  border: 0;
+
+a:hover {
+    color: #c81623;
+    /* 鼠标经过链接变颜色 */
 }
-ul {
-  list-style: none;
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active,
+a:focus {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-@media (min-width: 992px) {
-  .container {
-    width: 1024px;
-  }
-  .container_img {
-    margin-left: -137px;
-  }
-  .container_img .img_box span {
-    font-size: 20px !important;
-  }
+
+/* init css end*/
+html body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    /* linkMainContainer start*/
+    /* linkMainContainer end*/
+    /* listContainer start*/
+    /* listContainer end*/
 }
-/* animation start*/
-@keyframes loading {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  30% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-20px);
-    opacity: 0.8;
-    background-color: #ee17b8;
-  }
-  70% {
-    transform: translateY(10px);
-    opacity: 0.8;
-  }
-  85% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+html body .header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.6133rem;
+    border-bottom: 1px solid var(--cl-fontColor);
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
 }
-@keyframes opacity {
-  0% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+html body .header .navLogo {
+    width: 5.0667rem;
+    height: 1.6rem;
 }
-/* animation end */
-body {
-  position: relative;
-  margin: 0 auto;
-  min-width: 320px;
-  max-width: 750px;
-  width: 100%;
-  line-height: 1.5;
-  background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+html body .header .navLogo img {
+    width: 5.0667rem;
 }
-body .container {
-  padding: 0;
-  margin: 0;
-  /* back top */
+html body .header .navButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.2133rem;
+    width: 5.0133rem;
+    height: 1.3867rem;
+    font-size: 0.64rem;
+    color: var(--cl-white);
+    background-color: var(--cl-fontColor);
 }
-body .container .loading_box {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  z-index: 3;
+html body .header .navButton .links::before {
+    position: absolute;
+    top: -0.14rem;
+    left: -0.49rem;
+    content: "";
+    display: block;
+    width: 2.218rem;
+    height: 1.1rem;
+    border-radius: 0.2133rem;
+    background-color: var(--cl-white);
+    z-index: -1;
 }
-body .container .loading_box .animation_box {
-  width: 100%;
-  height: 80px;
-  margin-top: 65%;
+html body .header .navButton .navInvitationCard,
+html body .header .navButton .navHomePage {
+    position: relative;
+    padding-top: 0.1067rem;
+    z-index: 2;
+    transition: all 0.3s;
 }
-body .container .loading_box .animation_box .ul_box {
-  text-align: center;
+html body .header .navButton .navFontStyle {
+    color: var(--cl-fontColor);
+    font-weight: 600;
 }
-body .container .loading_box .animation_box .ul_box .li_box {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: springgreen;
-  border-radius: 50%;
-  margin-right: 4px;
-  animation: loading 1.5s 0s infinite;
-  transform: all 0.3s;
+html body .header .navContact {
+    width: 4.5867rem;
+    display: flex;
+    justify-content: space-around;
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(1) {
-  animation: loading 1.5s 0.2s infinite;
-  background-color: violet;
+html body .header .navContact i {
+    width: 0.9333rem;
+    height: 0.9333rem;
+    font-size: 0.9333rem;
+    color: var(--cl-fontColor);
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(2) {
-  animation: loading 1.5s 0s infinite;
-  background-color: #18e4ff;
+html body .navContactStyle {
+    position: absolute;
+    top: 1.8667rem;
+    right: 0.1333rem;
+    display: none;
+    width: 6.4rem;
+    z-index: 120;
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(3) {
-  animation: loading 1.5s 0.4s infinite;
-  background-color: #a942fd;
+html body .navContactStyle img {
+    width: 100%;
+    height: 100%;
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(4) {
-  animation: loading 1.5s 0s infinite;
-  background-color: #f07b4d;
+html body .topNav {
+    height: 2.1333rem;
+    display: flex;
+    font-size: 0.64rem;
+    color: var(--cl-fontColor);
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(5) {
-  animation: loading 1.5s 0.1s infinite;
-  background-color: #4dddf0;
+html body .topNav .topNavLink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    color: var(--cl-fontColor);
 }
-body .container .loading_box .animation_box .ul_box .li_box:nth-child(6) {
-  animation: loading 1.5s 0s infinite;
+html body .topNav .topNavLink:last-child i {
+    font-size: 0.64rem;
+    margin: 0 0.3733rem 0 0;
 }
-body .container .loading_box .animation_box .font_box {
-  letter-spacing: 2.5px;
-  text-align: center;
-  margin-left: 5px;
-  color: #bdbdbd;
+html body .topNav .topNavBorder {
+    font-weight: 600;
 }
-body .container .loading_box .animation_box .font_box .i_box {
-  margin-left: 2px;
-  color: #5f5f5f;
+html body .topNav .topNavBorder::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 1.28rem;
+    height: 0.6667rem;
+    border-bottom: 0.0267rem solid var(--cl-fontColor);
+    transform: translate(-50%, -20%);
 }
-body .container .loading_box .animation_box .font_box .i_box:nth-child(1) {
-  animation: opacity 2s 0.2s infinite;
+html body .linkMainContainer {
+    transition: all 0.3s;
 }
-body .container .loading_box .animation_box .font_box .i_box:nth-child(2) {
-  animation: opacity 2s 0.6s infinite;
+html body .linkMainContainer .bannerContainer {
+    width: 100%;
+    height: 11.52rem;
 }
-body .container .loading_box .animation_box .font_box .i_box:nth-child(3) {
-  animation: opacity 2s 1s infinite;
+html body .linkMainContainer .bannerContainer img {
+    width: 100%;
+    height: 100%;
 }
-body .container .header {
-  /* header */
-  position: fixed;
-  top: -0.0625rem;
-  left: 0;
-  width: 100%;
-  height: 3.75rem;
-  box-shadow: 0 0.5px 2px -1px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  z-index: 2;
+html body .linkMainContainer .cardInformationBox {
+    width: 100%;
+    height: 12.7467rem;
+    border-radius: 0 0 0.5333rem 0.5333rem;
+    padding: 0.64rem 0.4rem 0;
+    background-color: var(--cl-bgColor);
 }
-body .container .header .logo {
-  float: left;
-  width: 6.125rem;
-  height: 3.75rem;
-  margin-left: 0.65rem;
+html body .linkMainContainer .cardInformationBox .cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 19.2rem;
+    height: 11.2533rem;
+    border-radius: 0.3733rem;
+    font-size: 0.5333rem;
+    color: var(--cl-fontColor);
+    background-color: var(--cl-white);
 }
-body .container .header .logo img {
-  width: 100%;
+html body .linkMainContainer .cardInformationBox .cardContainer .cardTitleMore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.3733rem;
+    width: 100%;
+    height: 1.3867rem;
+    border-bottom: 1px solid var(--cl-gray);
 }
-body .container .header .all_box {
-  position: relative;
-  float: right;
-  width: 8.625rem;
-  height: 3.75rem;
-  color: #fa6c9b;
-  line-height: 4rem;
-  text-align: center;
-  font-size: 12px;
+html body .linkMainContainer .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-body .container .header .all_box #rota {
-  position: absolute;
-  top: 1.47rem;
-  right: 0.825rem;
-  width: 1rem;
-  height: 1rem;
+html body .linkMainContainer .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox i {
+    font-size: 0.66667rem;
+    padding: 0 0.32rem 0 0;
 }
-body .container .header .all_box #rota img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+html body .linkMainContainer .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox div {
+    font-size: 0.4267rem;
 }
-body .container .header .all_box .rota_box {
-  transform: rotate(90deg);
-  transform-origin: 50%;
-  transition: all 0.5s;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-body .container .header .all_box .rota_box2 {
-  transform: rotate(0deg);
-  transform-origin: 50%;
-  transition: all 0.5s;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox {
+    display: flex;
 }
-body .container .header .bg {
-  width: 100%;
-  height: 100%;
-  background: url(../images/upload/flow.png) no-repeat;
-  background-size: 100% 3.75rem;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg {
+    display: block;
+    width: 4.9067rem;
+    height: 7.7333rem;
+    border: 1px solid var(--cl-gray-100);
 }
-body .container .header .content_box {
-  /* content */
-  display: none;
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  width: 100%;
-  height: 5.2rem;
-  background-color: #ffffff;
-  border-radius: 0 0 1.25rem 1.25rem;
-  border: 1px solid #dadada;
-  padding: 0.625rem;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-of-type(2) {
+    margin: 0 0.7733rem;
 }
-body .container .header .content_box .style_nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(1) {
+    background: url(http://s.hunlihu.com/share/9e4fc35e5d1a4cccb056a673627c0264.jpg) no-repeat;
+    background-size: 100% 100%;
 }
-body .container .header .content_box .style_nav input {
-  flex: 20%;
-  width: 7rem;
-  height: 25px;
-  margin: 0.625rem 0.625rem;
-  outline: none;
-  border: 0;
-  border-radius: 0.625rem;
-  background: #ffdce5;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(2) {
+    background: url(http://s.hunlihu.com/share/dbb1c37ef14841c58d172d22d13667c7.jpg) no-repeat;
+    background-size: 100% 100%;
 }
-body .container .header .content_box .back {
-  position: absolute;
-  top: -31px;
-  left: 43%;
-  color: #fa6c9b;
-  width: 38px;
-  height: 21px;
-  text-align: center;
-  line-height: 22px;
-  border-radius: 5px;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(3) {
+    background: url(http://s.hunlihu.com/share/a3baf1da8da9437d89f0371eba72b8b6.jpg) no-repeat;
+    background-size: 100% 100%;
 }
-body .container .header .content_box .back img {
-  position: absolute;
-  top: -5px;
-  left: -15px;
-  width: 38px;
-  height: 29px;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationList {
+    margin-top: 0.5333rem;
 }
-body .container .header .content_box .back span {
-  position: absolute;
-  top: 0;
-  left: 6px;
-  font-size: 12px;
-  width: 38px;
-  text-align: center;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationList span {
+    display: inline-block;
+    margin: 0 0.4rem;
+    width: 0.32rem;
+    height: 0.32rem;
+    border: 1px solid var(--cl-fontColor);
+    border-radius: 50%;
 }
-body .container .header .content_box #back span {
-  border-bottom: 1px solid #fa6c9b;
+html body .linkMainContainer .cardInformationBox .cardContainer .rotationChart .rotationList .solidSircle {
+    background-color: var(--cl-fontColor);
 }
-body .container .header .content_box #home {
-  display: none;
-  top: -36px;
-  left: 0.7%;
-  width: 70px;
-  height: 29px;
-  background-color: transparent;
+html body .linkMainContainer .noticeBox {
+    display: flex;
+    padding: 0 0.7467rem;
+    height: 1.7067rem;
+    line-height: 1.7067rem;
+    font-size: 0.4267rem;
+    color: var(--cl-fontColor);
 }
-body .container .header .content_box #home img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 38px;
-  height: 29px;
+html body .linkMainContainer .noticeBox i {
+    font-size: 0.6933rem;
+    padding: 0 0.48rem 0 0;
 }
-body .container .header .content_box #home span {
-  position: absolute;
-  top: 5px;
-  left: 8px;
-  font-size: 12px;
-  width: 53px;
-  text-align: right;
-  border-bottom: 1px solid #fa6c9b;
+html body .linkMainContainer .noticeBox span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-body .container .container_img {
-  /* body */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 4.375rem;
-  overflow: hidden;
-  /* rotation chart */
+html body .linkMainContainer .marryCardContainer {
+    height: 12.1067rem;
+    border-radius: 0.5333rem 0.5333rem 0 0;
+    padding: 0.44rem 0.4rem;
+    background-color: var(--cl-bgColor);
 }
-body .container .container_img .wrap {
-  position: relative;
-  width: 100%;
-  height: 199px;
-  overflow: hidden;
-  margin-bottom: 10px;
+html body .linkMainContainer .marryCardContainer .marryCardBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 19.2rem;
+    height: 11.2533rem;
+    background-color: var(--cl-white);
+    border-radius: 0.5333rem;
 }
-body .container .container_img .wrap .navs {
-  overflow: hidden;
-  width: 500%;
-  height: 199px;
-  margin-left: -100%;
+html body .linkMainContainer .marryCardContainer .marryCardBox::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: url("../images/flower.png") no-repeat;
+    background-size: cover;
 }
-body .container .container_img .wrap .navs li {
-  float: left;
-  width: 20%;
+html body .linkMainContainer .marryCardContainer .marryCardBox .marryLeftImg {
+    width: 5.6rem;
+    height: 10.3467rem;
+    background: url("../images/marryImg.png") no-repeat;
+    background-size: cover;
+    margin: 0 0 0 0.2rem;
+    z-index: 10;
 }
-body .container .container_img .wrap .navs li img {
-  width: 100%;
-  height: 100%;
+html body .linkMainContainer .marryCardContainer .marryCardBox .marryRightContent {
+    width: 10.6667rem;
+    z-index: 10;
 }
-body .container .container_img .wrap #bots {
-  position: absolute;
-  bottom: 15px;
-  right: 0;
-  width: 60px;
-  height: 5px;
-  margin-left: -30px;
+html body .linkMainContainer .marryCardContainer .marryCardBox .marryRightContent .marryLogo {
+    width: 100%;
+    height: 6.3467rem;
+    background: url("../images/marryLogo.png") no-repeat;
+    background-size: cover;
+    margin: 0 0 0.3733rem;
 }
-body .container .container_img .wrap #bots li {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  margin: 0 2px;
-  background-color: rgba(238, 13, 88, 0.24);
-  border-radius: 50%;
-  transition: all 0.3s;
-  z-index: 999;
+html body .linkMainContainer .marryCardContainer .marryCardBox .marryRightContent .marryFont {
+    font-size: 0.48rem;
+    color: var(--cl-fontColor);
+    width: 100%;
+    height: 2.88rem;
 }
-body .container .container_img .wrap #bots .active {
-  width: 10px;
-  height: 5px;
-  background-color: rgba(238, 13, 88, 0.774);
-  border-radius: 30%;
+html body .linkMainContainer .marryCardContainer .marryCardBox .marryRightContent .marryFont div {
+    text-indent: 2em;
+    letter-spacing: 0.0133rem;
+    line-height: 1.5em;
+    display: -webkit-box;
+    /* 弹性伸缩盒子模型显示 */
+    overflow: hidden;
+    /* 溢出的部分影藏 */
+    text-overflow: ellipsis;
+    /* 文字用省略号代替超出的部分 */
+    -webkit-box-orient: vertical;
+    /* 设置或检索伸缩盒子对象的子元素排列方式 */
+    -webkit-line-clamp: 4;
 }
-body .container .container_img .img_box {
-  width: 33.99%;
-  text-align: center;
-  color: #b6b5b5;
-  margin: 0 5px;
-  flex: 30%;
-  margin-bottom: 0.3125rem;
-  box-shadow: 0.07rem 0.08rem 0.2rem 0.01rem #d8d7d7;
+html body .listMainContainer {
+    display: none;
+    margin-top: 0.625rem;
 }
-body .container .container_img .img_box a img {
-  width: 100%;
-  margin-bottom: 2px;
+html body .listMainContainer .listContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
-body .container .container_img .img_box span {
-  display: block;
-  font-size: 12px;
-  width: 115px;
-  height: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+html body .listMainContainer .listContainer .listBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0.5333rem;
+    width: 50%;
+    height: 14.4rem;
 }
-body .container .style_box {
-  display: none;
+html body .listMainContainer .listContainer .listBox .listContent {
+    overflow: hidden;
+    width: 8.5333rem;
+    height: 100%;
+    border: 0.0267rem solid var(--cl-gray-100);
 }
-body .container .style_box .style_css {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 4.375rem;
-  overflow: hidden;
+html body .listMainContainer .listContainer .listBox .listContent .listImg {
+    display: block;
+    width: 100%;
+    height: 13.3333rem;
 }
-body .container .style_box .style_css .img_box {
-  width: 33.99%;
-  text-align: center;
-  color: #b6b5b5;
-  margin: 0 5px;
-  flex: 30%;
-  margin-bottom: 0.3125rem;
-  box-shadow: 0.07rem 0.08rem 0.2rem 0.01rem #d8d7d7;
+html body .listMainContainer .listContainer .listBox .listContent .listImg img {
+    width: 100%;
+    height: 100%;
 }
-body .container .style_box .style_css .img_box a img {
-  width: 100%;
-  margin-bottom: 2px;
+html body .listMainContainer .listContainer .listBox .listContent .listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.0667rem;
+    font-size: 0.64rem;
+    color: var(--cl-gray-200);
+    padding: 0 0.4rem;
 }
-body .container .style_box .style_css .img_box span {
-  display: block;
-  width: 115px;
-  height: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 12px;
+html body .listMainContainer .listContainer .listBox .listContent .listTitle span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-body .container .style_box .hide_box {
-  display: none;
+html body .listMainContainer .listContainer .listBox .listContent .listTitle div {
+    width: 1.4933rem;
+    height: 0.7467rem;
+    border-radius: 0.16rem;
+    background-color: var(--cl-fontColor);
+    color: var(--cl-white);
+    text-align: center;
+    line-height: 0.7467rem;
 }
-body .container .back_top {
-  position: fixed;
-  top: 80%;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  background-color: #fa6c9b;
-  display: none;
-  text-align: center;
-  line-height: 28px;
-  border-radius: 2px;
+html body .listMainContainer .listContainer .listBox .listContent .listTitle div span {
+    display: block;
+    font-size: 0.48rem;
 }
-body .container .back_top img {
-  width: 60%;
-  height: 60%;
+
+/* back up start */
+.backTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 80%;
+    right: 0.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--cl-backUp);
+    visibility: hidden;
+    border-radius: 0.16rem;
+    z-index: 999;
+    cursor: pointer;
+    transform: rotate(90deg);
 }
+.backTop i {
+    font-size: 1.3333rem;
+    color: var(--cl-white);
+    font-weight: 700;
+}
+
+/* back up end */
+/* media start */
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+/* media end*/
