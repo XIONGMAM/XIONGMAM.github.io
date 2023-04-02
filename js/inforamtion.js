@@ -8,7 +8,6 @@ const data = [
             {
                 id: 1,
                 url: "https://s.hunlihu.com/html/3Q33vffRvR",
-
                 title1: "韩式简约婚礼",
                 time1: "2021年8月8日",
                 style: "翻页",
@@ -20,7 +19,6 @@ const data = [
             {
                 id: 2,
                 url: "https://s.hunlihu.com/html/RKKfRK3fv1",
-                src: "https://s.hunlihu.com/share/e2941ab37dd94cdab8b4e6bae6406f1b.jpg",
                 title1: "素雅纯色崽崽❤长页ღ",
                 time1: "2021年1月8日",
                 style: "长页",
