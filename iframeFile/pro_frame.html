@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="author" content="XIONGBAB"/><meta name="description" content="MyLifeMemory"/><meta name="keywords" content="XIONGBAB,MyLifeMemory,"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Window-target" content="_top"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1user-scalable=no"/><link id="icon-link" rel="Shortcut Icon" href=""/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css"/><title>pro_frame</title><script defer="defer" src="../static/js/runtime~iframeJs.38887298.js"></script><script defer="defer" src="../static/js/489.0788b82d.js"></script><script defer="defer" src="../static/js/iframeJs.f167e449.js"></script><link href="../static/css/iframeJs.98885fb8.css" rel="stylesheet"></head><body><div class="container"><div class="centerBox"><div class="tipContent"><span class="tipBtn">重要提示</span><div class="tipText"><em>1、在任何开发下（代码 /单词 / 正规写法，都不能写错，写错了检查起来会头痛）</em> <em>2、颜色分类：文本 <i>黑色</i> 、重点 <i>红色</i> 、注释 <i>绿色</i> 、特殊 <i>棕色</i> 、首行缩进两个字符、链接默认蓝色 </em><em>3、字符默认大小16px，重点20px，标题24px，特殊28px，最小为14px</em></div></div><div class="tagContent"><span class="tipBtn">文本内容</span><h3>一、框架使用前的准备</h3><ul><li>使用前，下载好官网的文件</li><li>引入相关文件<ul class="noList"><li class="codeListContainer"><div class="preBox"><span class="preSpan">Html</span> <button class="preButton">Copy&nbsp;code</button><pre><code class="language-html">  &lt;!-- css --&gt;
+  &lt;link rel="stylesheet" href="./css/bootstrap.min.css" /&gt;
+  
+  &lt;!-- js --&gt;
+  &lt;script&gt; src="./js/jQuery.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt; src="./js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt; src="./js/index.js"&gt;&lt;/script&gt; </code></pre></div></li></ul></li></ul><h3>二、流体容器</h3><ul><li>流体布局 width ： 100%<pre><code class="language-html">  &lt;div class="container-fluid"&gt;&lt;/div&gt; </code></pre></li><li>固定容器 width : 阈值 >=1200 ：1170px || >=992 : 970px || >=768 : 750px<pre><code class="language-html">  &lt;div class="container"&gt;&lt;/div&gt; </code></pre></li></ul><h3>三、响应式工具 - 在不同屏幕下实现显示影藏功能</h3><ul><li>影藏-在特定的尺寸下会影藏<pre><code class="language-html">  &lt;div class="hidden-xs"&gt;hidden-xs&lt;/div&gt;
+  &lt;div class="hidden-sm"&gt;hidden-sm&lt;/div&gt;
+  &lt;div class="hidden-md"&gt;hidden-md&lt;/div&gt;
+  &lt;div class="hidden-lg"&gt;hidden-lg&lt;/div&gt; </code></pre></li><li>显示-在特定的尺寸下才会显示<pre><code class="language-html">  &lt;div class="visible-xs"&gt;hidden-xs&lt;/div&gt;
+  &lt;div class="visible-sm"&gt;hidden-sm&lt;/div&gt;
+  &lt;div class="visible-md"&gt;hidden-md&lt;/div&gt;
+  &lt;div class="visible-lg"&gt;hidden-lg&lt;/div&gt; </code></pre></li></ul><h3>四、基本模版</h3><ul class="noList"><li class="codeListContainer"><div class="preBox"><span class="preSpan">Html</span> <button class="preButton">Copy&nbsp;code</button><pre><code class="language-html">  &lt;!doctype html&gt;
+  &lt;html lang="zh-CN"&gt;
+  
+  &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;
+      &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+  
+      &lt;!-- Bootstrap --&gt;
+      &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"&gt;
+      &lt;!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 --&gt;
+      &lt;!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 --&gt;
+      &lt;!--[if lt IE 9]&gt;
+        &lt;script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"&gt;&lt;/script&gt;
+      &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h1&gt;你好，世界！&lt;/h1&gt;
+  
+      &lt;!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) --&gt;
+      &lt;script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+          integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"&gt;
+      &lt;/script&gt;
+      &lt;!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 --&gt;
+      &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+          integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"&gt;
+      &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt; </code></pre></div></li></ul><h3>五、列偏移</h3><ul><li>col-md-offset-* ： *代表要偏移的份数，是往左偏移</li><li>代码：<pre><code class="language-html">  &lt;div&gt; class="col-lg-4 col-lg-offset-4"&gt;列偏移&lt;/div&gt;</code></pre></li></ul><h3>六、列排序</h3><ul><li>就是把左边的盒子位置替换到右边盒子的位置，实现位置交换的作用</li><li>代码：<pre><code class="language-html">  &lt;!-- 向右推 --&gt;
+  &lt;div class="col-lg-4 col-lg-push-8"&gt;列偏移&lt;/div&gt;
+  &lt;!-- 向左拉 --&gt;
+  &lt;div class="col-lg-8 col-lg-pull-4"&gt;列偏移&lt;/div&gt;</code></pre></li></ul><h3>七、列嵌套</h3><ul><li>row里面再套row</li><li>代码：<pre><code class="language-html">  &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+          &lt;div class="col-lg-4"&gt;
+              &lt;div class="row"&gt;
+                  &lt;div&gt; class="col-lg-4"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div&gt; class="col-lg-4 col-lg-pull-1"&gt;列偏移&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;</code></pre></li></ul><h3>八、md使用的屏率最高，可以替代lg sm</h3><br/><h3>九、常用样式</h3><ul><li>排版<ol><li>标题<dl><dt>对h1~h6的标题效果进行覆盖，提供劳务对应的类名，为非标题元素设置样式</dt><dt>副标题 small标签 或 .small类名</dt></dl></li><li>段落</li><li>强调: 定义了一套类名，强调类名，强调类都是通过颜色来表示强调<ol><li>.text-muted：提示，使用浅灰色</li><li>.text-primary：主要，使用蓝色</li><li>.text-success：成功，使用浅绿色</li><li>.text-info：通知信息，使用浅蓝色</li><li>.text-warning：警告，使用黄色</li><li>.text-danger：危险，使用褐色</li></ol></li><li>对齐:通过定义四个类名来控制文本的对齐风格<ol><li>.text-left：左对齐</li><li>.text-center：居中对齐</li><li>.text-right：右对齐</li><li>.text-justify：两端对齐</li></ol></li></ol></li></ul><h3>十、设置布局容易</h3><ul class="noList"><li class="codeListContainer"><div class="preBox"><span class="preSpan">Css</span> <button class="preButton">Copy&nbsp;code</button><pre><code class="language-css">  @media screen and(max-width:767px) {.container {width: 100%;}}
+  @media screen and(min-width:768px) {.container {width: 750px;}}
+  @media screen and(min-width:992px) {.container { width: 970px;}}
+  @media screen and(min-width:1200px) {.container {width: 1170px;}}</code></pre></div></li></ul><h3>十一、注意，bootstrap设置了左右15边距，可以用padding 或 margin 相反负值 或 0消除</h3><br/><h3>十二、栅格系统，页面划分12列 xs-extra small sm-small md-medium lg-large</h3><ul><li>小于12 会留空白，大于12会自动换行</li><li>列嵌套，盒子里套盒子，也会划分12等份</li><li>原理是采用百分比%，浮动float来实现一行显示，如果想要间距，使用margin的话，宽度不够盒子会掉下来<ol><li>解决办法：外层盒子给padding，内层再多一个盒子100%</li><li>如果要用列嵌套，最好多加一个列row，这样可以取消padding，而且高度会和父级一样</li></ol></li><li>当设计稿与container的1200px不一样的时候，可以修改container宽度来解决</li><li>字体图标居中用 element : beforte{ vertical-align: middle;}</li></ul></div></div><div class="footerBox"></div></div><div id="goTop"></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script><script>document.addEventListener("DOMContentLoaded", function (event) {
+            Prism.highlightAll();
+        });</script></html>
