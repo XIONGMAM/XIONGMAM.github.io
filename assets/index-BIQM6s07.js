@@ -1,0 +1,1 @@
+import"./base-BOVE5efH.js";import{E as o}from"./el-empty-Czzogs2_.js";import{_ as t,c as r,f as c,o as n}from"./index-rcW_pH8g.js";import"./index-CfzyLNe_.js";import"./index-DL17Y2WH.js";import"./style-CQyj6J43.js";const i={};function m(s,p){const e=o;return n(),r("div",null,[c(e,{description:"正在开发中","image-size":300})])}const x=t(i,[["render",m]]);export{x as default};
